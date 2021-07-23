@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Book</title>
+  <link rel="stylesheet" type="text/css" href="style/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="headerNavigation">
+    <h1>Story Shope</h1>
+    <nav class="flexContainer">
+      <div class="logo">
+        <img src="images/logo.png" />
+      </div>
+      <ul class="ul">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li>
+          <div class="center">
+            <input type="checkbox" id="show">
+            <label for="show" class="show-btn">Login</label>
+            <div class="li">
+              <label for="show" class=" close-btn fa fa-times"></label>
+              <div class="text">Login Form</div>
+              <form action='https://wd-bookstore-default-rtdb.firebaseio.com/korisnici.json' method="GET" id="submitForm">
+                <div class="data">
+                  <label>Email</label>
+                  <input type="email" id="txtEmail" name="email" autocomplete="off">
+                </div>
+                <div class="data">
+                  <label>Password</label>
+                  <input type="password" id="txtPassword" name="password" autocomplete="off">
+                </div>
+                <div class="forgot-pass"><a href="">Forgot password?</a></div>
+                <div class="btn">
+                  <div class="inner"></div>
+                  <button type="submit">Login</button>
+                </div>
+                <div class="signup-link">Not a member? <a href="#">Sign up now</a></div>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li>
+          <label for="" class="btn" onclick="toggleLogin()">Register</label>
+          <div class="overlay">
+            <div class="login">
+              <div class="header">
+                <h1>Register <i class=" close-btn fa fa-times" onclick="toggleLogin()"></i></h1>
+              </div>
+              <div class="body">
+                <form action="https://wd-bookstore-default-rtdb.firebaseio.com/korisnici.json" class="form" id="submitRegistration">
+                  <input type="text" id="name1" placeholder="Name"><br>
+                  <input type="text" id="lastName1" placeholder="Lastname"><br>
+                  <input type="text" id="address1" placeholder="Address"><br>
+                  <input type="text" name="" id="telephone1" placeholder="Telephone"><br>
+                  <input type="date" id="date1" placeholder="Date of birth"><br>
+                  <input type="email" id="email1" placeholder="Email" autocomplete="off"><br>
+                  <input type="password" id="password1" placeholder="Password" autocomplete="off"><br>
+                  <input type="text" id="username1" placeholder="Username"><br>
+                  <div class="footer">
+                    <button type="submit">Save</button>
+                  </div>
+                </form>
+              </div>
+              <!-- <div class="footer">
+                                <button>Save</button>
+                            </div>  -->
+            </div>
+          </div>
+        </li>
+        <li><a href="card.html"><i class="fa fa-shopping-cart" style="font-size:36px; color: mediumorchid;"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div>
+    <form class="form1">
+      <label for="name">Name of the book</label><br />
+      <input type="text" name="Name of the book" size="50px" max="100" value="Na Drini Cuprija" class="input1" /><br>
+      <label>Author</label><br>
+      <input type="text" size="50px" max="100" class="input1" id="ime" /><br>
+      <label>Publishing House</label><br>
+      <input type="text" name="Author" placeholder="Vulkan izdavaštvo" value="Vulkan izdavaštvo" size="50px" max="100" class="input1"><br>
+      <label>Year of publishing</label><br>
+      <input type="text" name="Year of publishing" value="2020" size="50px" max="100" placeholder="2020" class="input1" /><br>
+      <p>Descrption</p>
+      <textarea rows="6" cols="50" class="input1" id="opis">
+        </textarea><br>
+      <label>Price</label><br>
+      <input type="text" placeholder="Price" value="935 RSD" size="50px" max="100" class="input1" /><br>
+      <label>Language</label><br>
+      <input type="text" placeholder="Language" value="Serbian" size="50px" max="100" class="input1" /><br>
+      <label>Number of page</label><br>
+      <input type="text" name="" id="" value="352" class="input1"><br>
+      <label for="">Language</label><br>
+      <input type="number" placeholder="Number of page" value="352" size="50px" class="input1" /><br>
+      <p>Connection type</p>
+      <select name="" id="">
+        <option value="Hard">Hard</option>
+        <option value="Soft">Soft</option>
+      </select><br>
+      <p>Letter</p>
+      <select name="" id="">
+        <option value="Latin">Latin</option>
+        <option value="Cyrillic">Cyrillic</option>
+      </select>
+      <div class="btn_users">
+        <input type="submit" value="Submit" class="btn_edit">
+      </div>
+
+    </form>
+
+    <footer>
+      Copyright &copy; 2020 The Story Shop
+    </footer>
+    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

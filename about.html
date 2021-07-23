@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Shop</title>
+  <link rel="stylesheet" type="text/css" href="style/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="headerNavigation">
+    <h1>Story Shope</h1>
+    <nav class="flexContainer">
+      <ul class="ul">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li>
+          <div class="center">
+            <input type="checkbox" id="show">
+            <label for="show" class="show-btn">Login</label>
+            <div class="li">
+              <label for="show" class=" close-btn fa fa-times"></label>
+              <div class="text">Login Form</div>
+              <form action='https://wd-bookstore-default-rtdb.firebaseio.com/korisnici.json' method="GET" id="submitForm">
+                <div class="data">
+                  <label>Email</label>
+                  <input type="text" id="txtEmail" name="email" autocomplete="off">
+                </div>
+                <div class="data">
+                  <label>Password</label>
+                  <input type="password" id="txtPassword" name="password" autocomplete="off">
+                </div>
+                <div class="forgot-pass"><a href="">Forgot password?</a></div>
+                <div class="btn">
+                  <div class="inner"></div>
+                  <button type="submit">Login</button>
+                </div>
+                <div class="signup-link">Not a member? <a href="#">Sign up now</a></div>
+              </form>
+            </div>
+          </div>
+        </li>
+
+        </div>
+        <li>
+          <label for="" class="btn" onclick="toggleLogin()">Register</label>
+          <div class="overlay">
+            <div class="login">
+              <div class="header">
+                <h1>Register <i class=" close-btn fa fa-times" onclick="toggleLogin()"></i></h1>
+              </div>
+              <div class="body">
+                <form action="https://wd-bookstore-default-rtdb.firebaseio.com/korisnici.json" class="form" id="submitRegistration">
+                  <input type="text" id="name1" placeholder="Name"><br>
+                  <input type="text" id="lastName1" placeholder="Lastname"><br>
+                  <input type="text" id="address1" placeholder="Address"><br>
+                  <input type="text" name="" id="telephone1" placeholder="Telephone"><br>
+                  <input type="date" id="date1" placeholder="Date of birth"><br>
+                  <input type="email" id="email1" placeholder="Email" autocomplete="off"><br>
+                  <input type="password" id="password1" placeholder="Password" autocomplete="off"><br>
+                  <input type="text" id="username1" placeholder="Username"><br>
+
+                  <div class="footer">
+                    <button type="submit">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="card.html"><i class="fa fa-shopping-cart" style="font-size:36px; color: mediumorchid;"></i></a></li>
+      </ul>
+
+
+      <div class="logo">
+        <img src="images/logo.png" />
+      </div>
+
+    </nav>
+  </header>
+  <div id="zaSliku">
+
+  </div>
+
+  <footer>
+    Copyright &copy; 2020 The Story Shop
+  </footer>
+  <script type="text/javascript" src="js/about.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+
+</body>
+
+</html>
